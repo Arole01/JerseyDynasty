@@ -5,6 +5,7 @@ import { FaHome, FaUser, FaBars } from 'react-icons/fa'
 import { CartContext } from "../Pages/cartContext"
 import { useContext, useState } from 'react'
 import { AppContext } from '../Pages/authContext'
+import ReactTooltip from 'react-tooltip'
 import HeaderDropdown from './HeaderDropdown'
 import "./Header.css"
 
@@ -21,13 +22,14 @@ export const Header = () => {
 
                 <p className='brand'>Jersey <span>Dynasty</span></p>
 
-                <Link to={"/"}><FaHome/></Link>
+                <Link to={"/"} data-tooltip="Home"><FaHome/>
+                </Link>
 
-                <Link to="/login" className='account'>
+                <Link to="/login" data-tooltip="Account" className='account'>
                     <FaUser/>
                 </Link>
 
-                <Link to="/cart" className='cart-wrapper'>
+                <Link to="/cart" data-tooltip="Cart" className='cart-wrapper'>
                     <IoIosCart className='cart-icon' />
                     <span className='cart-count'>{cart.items.length}</span>
                 </Link>
