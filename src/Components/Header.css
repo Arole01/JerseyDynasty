@@ -1,0 +1,137 @@
+.header {
+    width: 100%;
+    background-color: white; 
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+}
+
+
+.menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+
+.brand {
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+    flex: 1; 
+    margin: 0;
+    color: #222;
+}
+
+.brand span {
+    color: #FF8C00
+; 
+}
+
+
+.logo a {
+    margin-left: 1rem;
+    font-size: 1.3rem;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo a:hover {
+  color: #e63946; 
+}
+
+
+.cart-wrapper {
+  position: relative;
+}
+
+.cart-icon {
+  font-size: 1.5rem;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: #e63946;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+
+/* Search bar container */
+.search-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #f9f9f9; /* subtle background */
+  border-top: 1px solid #ddd;
+}
+
+/* Input field */
+.search-bar input {
+  flex: 1; /* makes it long */
+  max-width: 600px; /* cap width on large screens */
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+/* Search button */
+.search-bar button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-left: none;
+  background-color: #e63946; /* accent color */
+  color: #fff;
+  font-weight: bold;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #c92c3a;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .search-bar input {
+    max-width: 100%;
+    font-size: 0.9rem;
+  }
+  .search-bar button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .brand {
+    font-size: 1.2rem;
+  }
+  .menu-icon {
+    font-size: 1.3rem;
+  }
+  .logo a {
+    font-size: 1.1rem;
+  }
+}
