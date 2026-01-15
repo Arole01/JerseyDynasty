@@ -87,6 +87,7 @@ export const Home = () => {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
+        // arrows: true,
     }
 
     useEffect(() => {
