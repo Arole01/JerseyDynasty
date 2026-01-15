@@ -4,15 +4,13 @@ import { IoIosCart } from 'react-icons/io'
 import { FaHome, FaUser, FaBars } from 'react-icons/fa'
 import { CartContext } from "../Pages/cartContext"
 import { useContext, useState } from 'react'
-import { AppContext } from '../Pages/authContext'
-import ReactTooltip from 'react-tooltip'
+
 import HeaderDropdown from './HeaderDropdown'
 import "./Header.css"
 
 
 export const Header = () => {
     const { cart } = useContext(CartContext);
-    const { user, logout } = useContext(AppContext);
     const [openMenu, setOpenMenu] = useState(false);
 
     return (
