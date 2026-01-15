@@ -120,8 +120,24 @@ export const Home = () => {
                 </Slider>
             </section>
 
+                    <section className='category'>
+                        <div className='categories'>
+                            <h1>All Jerseys Categories</h1>
+                        <div className='allcategories'>
+                            <p className='category-items' onClick={() =>setCategory("club-jersey")}>Club Jerseys</p>
+                            <p className='category-items' onClick={() => setCategory("retro-jersey")}>Retro Jerseys</p>
+                            <p className='category-items' onClick={() => setCategory("country-jersey")}>Country Jerseys</p>
+                            <p className='category-items' onClick={() => setCategory("kids-jersey")}>Kids Jerseys</p>
+                            <p className='category-items' onClick={() => setCategory("baseball-jersey")}>Baseball Jerseys</p>
+                            <p className='category-items' onClick={() => setCategory("basketball-jersey")}>Basketball Jerseys</p>
+                            <p className='category-items' onClick={() => setCategory("")}>Shop All</p>
+                        </div>
+                        </div>
 
+                    </section>
         </div>
+
+        
     )
     }
 
