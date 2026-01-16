@@ -10,8 +10,8 @@
     background-size: cover;   
     background-position: center; 
     background-repeat: no-repeat; 
-    display: block;
-    /* flex-direction: column; */
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 100px;
@@ -19,7 +19,7 @@
 }
 
 .carousel-container {
-    width: 100%;
+    width: 98%;
     margin:0 auto;
 }
 
@@ -32,7 +32,7 @@
     margin: 0 auto;
 }
 
-/* Hide any default text and show only slick arrow icons */
+
 .slick-prev,
 .slick-next {
   z-index: 2;
@@ -42,16 +42,16 @@
 
 .slick-prev:before,
 .slick-next:before {
-  font-family: "slick";   /* use slick’s icon font */
-  font-size: 30px;        /* arrow size */
+  font-family: "slick";   
+  font-size: 30px;        
   line-height: 1;
   opacity: 0.75;
-  color: black;           /* arrow color */
-  content: "←";           /* left arrow */
+  color: black;           
+  content: "←";           
 }
 
 .slick-next:before {
-  content: "→";           /* right arrow */
+  content: "→";           
 }
 
 
@@ -65,6 +65,7 @@
 }
 
 .categories {
+    
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
