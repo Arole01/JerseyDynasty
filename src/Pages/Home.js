@@ -83,10 +83,14 @@ export const Home = () => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToShow: 2,
+        slidesToScroll: 2,
         autoplay: true,
         autoplaySpeed: 3000,
+        centerMode: false,
+  adaptiveHeight: false,
+  variableWidth: false
+
         // arrows: true,
     }
 
@@ -108,6 +112,7 @@ export const Home = () => {
     }, [category]);
 
     return (
+        <>
         <div className='carousel'>
             <section className="carousel-container">
                 <Slider {...sliderSettings}>
@@ -120,13 +125,14 @@ export const Home = () => {
                     ))}
                 </Slider>
             </section>
+            </div>
 
                     <section className='category'>
                         <div className='categories'>
                             <h1>All Jerseys Categories</h1>
                         <div className='allcategories'>
                             <p className='category-items' onClick={() =>setCategory("club-jersey")}>Club Jerseys</p>
-                            <p className='category-items' onClick={() => setCategory("retro-jersey")}>Retro Jerseys</p>
+                            <p className='category-items' onClick={() => setCategory("retro-jersey")}third>Retro Jerseys</p>
                             <p className='category-items' onClick={() => setCategory("country-jersey")}>Country Jerseys</p>
                             <p className='category-items' onClick={() => setCategory("kids-jersey")}>Kids Jerseys</p>
                             <p className='category-items' onClick={() => setCategory("baseball-jersey")}>Baseball Jerseys</p>
@@ -136,7 +142,9 @@ export const Home = () => {
                         </div>
 
                     </section>
-        </div>
+        
+
+        </>
 
         
     )
