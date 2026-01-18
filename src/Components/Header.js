@@ -5,18 +5,21 @@ import { FaHome, FaUser, FaBars } from 'react-icons/fa'
 import { CartContext } from "../Pages/cartContext"
 import { useContext, useState } from 'react'
 
-import HeaderDropdown from './HeaderDropdown'
+
 import "./Header.css"
 
 
 export const Header = () => {
     const { cart } = useContext(CartContext);
-    const [openMenu, setOpenMenu] = useState(false);
+    
 
     return (
         <header className='header'>
         <div className='logo'>
-            <FaBars className='menu-icon' onClick={() => setOpenMenu(!openMenu)} />
+            <Link to="/">
+      <img src="https://res.cloudinary.com/de91sxsp3/image/upload/v1768689874/CircJDLogo_riyun8.png" alt="Jersey Dynasty Logo" className="logo-img" />
+    </Link>
+            
 
                 <p className='brand'>Jersey <span>Dynasty</span></p>
 
@@ -34,7 +37,7 @@ export const Header = () => {
         </div>
         <div className="search-bar"> <input type="text" placeholder="Search for jerseys" /> <button type="submit">Search</button> 
         </div>
-        {openMenu && <HeaderDropdown closeMenu={()=> setOpenMenu(false)}/>}
+        
         </header>
     )
 
