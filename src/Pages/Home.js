@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect} from 'react'
 import "./Home.css"
 import { CartContext } from './cartContext'
+import { SampleProducts } from '../Components/SampleProducts'
 import Slider from "react-slick";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -12,56 +13,6 @@ export const Home = () => {
     const {addToCart} = useContext(CartContext)
     const [loading, setLoading] = useState(true)
 
-
-    const sampleProducts = [
-        {_id: "1",
-        name: "Chelsea",
-        description: "Official Chelsea FC Home Jersey for the 2025 season.",
-        price: 25000,
-        imageUrl: "https://res.cloudinary.com/de91sxsp3/image/upload/v1768308953/WhatsApp_Image_2026-01-12_at_22.13.36_1_oip8ee.jpg",
-        category: "club-jersey"
-        },
-        {
-        _id: "2",
-        name: "Argentina",
-        description: "Official Argentina National Football Team Jersey for 2024.",
-        price: 28000,
-        imageUrl: "https://res.cloudinary.com/de91sxsp3/image/upload/v1768308934/ArgentinaBack_lc9f0q.jpg",
-        category: "country-jersey"
-        },
-        {
-        _id: "3",
-        name: "Super Eagles Retro",
-        description: "Official Super Eagles Retro Jersey for 2025.",
-        price: 20000,
-        imageUrl: "https://res.cloudinary.com/de91sxsp3/image/upload/v1768308933/Super_Eagles3_drfjaf.jpg",
-        category: "retro-jersey"
-        },
-        {
-            _id: "4",
-            name: "Brazil",
-            description: "Official Brazil National Football Team Jersey for 2025.",
-            price: 20000,
-            imageUrl: "https://res.cloudinary.com/de91sxsp3/image/upload/v1768308934/ArgentinaBack_lc9f0q.jpg",
-            category: "country-jersey"
-        },
-        {
-            _id: "5",
-            name: "Crystal Palace",
-            description: "Official Crystal Palace Home Jersey for the 2025 season.",
-            price: 25000,
-            imageUrl: "https://res.cloudinary.com/de91sxsp3/image/upload/v1768308934/WhatsApp_Image_2026-01-12_at_22.13.10_mhds14.jpg",
-            category: "club-jersey"
-        },
-        {
-            _id: "6",
-            name: "Base",
-            description: "Official Baseball Jersey for the 2024 season.",
-            price: 18000,
-            imageUrl: "https://res.cloudinary.com/de91sxsp3/image/upload/v1768308934/WhatsApp_Image_2026-01-12_at_22.13.11_1_c0yfgs.jpg",
-            category: "baseball-jersey"
-        }
-    ]
 
     const carouselImages = [
         {id: "img1", src:"https://res.cloudinary.com/de91sxsp3/image/upload/v1768308954/WhatsApp_Image_2026-01-12_at_22.13.39_ljacx6.jpg"},
@@ -98,10 +49,10 @@ export const Home = () => {
         setLoading(true);
         try{
             if (category) {
-                const filtered = sampleProducts.filter((item) => item.category.toLowerCase() === category.toLowerCase());
+                const filtered = SampleProducts.filter((item) => item.category.toLowerCase() === category.toLowerCase());
                 setProducts(filtered);
             } else {
-                setProducts(sampleProducts);
+                setProducts(SampleProducts);
             }
         } catch (error) {
             setProducts([]);
