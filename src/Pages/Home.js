@@ -142,6 +142,25 @@ export const Home = () => {
                         </div>
 
                     </section>
+
+                    <section>
+                        <div className='alljerseys'>
+                            {products.map((items)=>
+                            
+                            <div className='jerseys' key={items._id}>
+                                <Link to={`/${items._id}`}><img src={items.imageUrl} alt='' /></Link>
+                                <h2>{items.name}</h2>
+                                <p>{items.description}</p>
+                                <h3>#{items.price}</h3>
+                                <button className='btn' onClick={() => addToCart(items._id)}>Add to Cart</button>
+
+                            </div>
+                            )}
+
+                        </div>
+                    </section>
+                    {products.length === 0 && <h1>{err}</h1>}
+                    {products.length <1 && loading && <h1>Product Loading!!</h1>}
         
 
         </>
