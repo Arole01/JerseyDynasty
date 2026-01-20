@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { IoIosCart } from 'react-icons/io'
-import { FaHome, FaUser, FaBars } from 'react-icons/fa'
+import { FaHome, FaUser } from 'react-icons/fa'
 import { CartContext } from "../Pages/cartContext"
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import { SearchContext } from '../Pages/searchContext'
 
 
@@ -25,7 +25,9 @@ export const Header = () => {
 
                 <p className='brand'>Jersey <span>Dynasty</span></p>
 
-                <Link to={"/"} data-tooltip="Home"><FaHome/>
+                <Link to={"/"} data-tooltip="Home"
+                onClick={() => setSearchTerm("")}>
+                <FaHome/>
                 </Link>
 
                 <Link to="/login" data-tooltip="Account" className='account'>
