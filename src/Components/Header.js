@@ -4,6 +4,7 @@ import { IoIosCart } from 'react-icons/io'
 import { FaHome, FaUser, FaBars } from 'react-icons/fa'
 import { CartContext } from "../Pages/cartContext"
 import { useContext, useState } from 'react'
+import { SearchContext } from '../Pages/searchContext'
 
 
 import "./Header.css"
@@ -11,6 +12,7 @@ import "./Header.css"
 
 export const Header = () => {
     const { cart } = useContext(CartContext);
+    const { searchTerm, setSearchTerm } = useContext(SearchContext)
     
 
     return (
@@ -35,7 +37,10 @@ export const Header = () => {
                     <span className='cart-count'>{cart.items.length}</span>
                 </Link>
         </div>
-        <div className="search-bar"> <input type="text" placeholder="Search for jerseys" /> <button type="submit">Search</button> 
+        <div className="search-bar"> <input type="text" placeholder="Search for jerseys" 
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}/> 
+        <button type="submit">Search</button> 
         </div>
         
         </header>

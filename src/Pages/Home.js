@@ -5,8 +5,10 @@ import { SampleProducts } from '../Components/SampleProducts'
 import Slider from "react-slick";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { SearchContext } from './searchContext';
 
 export const Home = () => {
+    const { searchTerm } = useContext(SearchContext)
     const [products, setProducts] = useState([]);
     const [category, setCategory] = useState("")
     const [err, setErr] = useState("");
@@ -48,19 +50,26 @@ export const Home = () => {
     useEffect(() => {
         setLoading(true);
         try{
+            let filtered = SampleProducts
+
             if (category) {
-                const filtered = SampleProducts.filter((item) => item.category.toLowerCase() === category.toLowerCase());
-                setProducts(filtered);
-            } else {
-                setProducts(SampleProducts);
+                filtered = filtered.filter((item) => item.category.toLowerCase() === category.toLowerCase());
             }
+
+                if (searchTerm) {
+                    filtered = filtered.filter((item) => 
+                    item.name.toLocaleLowerCase().includes(searchTerm.toLowerCase()) || 
+                    item.description.toLowerCase().includes(searchTerm.toLowerCase())
+                )
+                }
+                setProducts(filtered);
         } catch (error) {
             setProducts([]);
             setErr("Failed to fetch products");
         } finally {
             setLoading(false);
         }
-    }, [category]);
+    }, [category, searchTerm]);
 
     return (
         <>
