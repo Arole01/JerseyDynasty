@@ -15,7 +15,8 @@ export const Login = () => {
 
 
     const schema = Yup.object({
-        email:("Enter a valid email"), password: Yup.string() 
+        email:Yup.string().required("Enter a valid email").trim().email("Enter a valid enail"), 
+        password: Yup.string() 
         .required("Password is required") 
         .min(8, "Password must be at least 8 characters") 
         .max(10, "Password must not exceed 10 characters") 
