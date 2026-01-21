@@ -5,6 +5,7 @@ import { Home } from './Pages/Home';
 import { AuthContext } from './Pages/authContext';
 import { CartProvider } from './Pages/cartContext';
 import { SearchProvider } from './Pages/searchContext';
+import SingleProduct from './Pages/SingleProduct';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/:id" element={<SingleProduct/>}/>
         </Routes>
         </SearchProvider>
       </CartProvider>
