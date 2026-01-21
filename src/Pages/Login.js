@@ -15,7 +15,7 @@ export const Login = () => {
 
 
     const schema = Yup.object({
-        email:Yup.string().required("Enter a valid email").trim().email("Enter a valid enail"), 
+        email:Yup.string().required("Enter a valid email").trim().email(), 
         password: Yup.string() 
         .required("Password is required") 
         .min(8, "Password must be at least 8 characters") 
@@ -57,7 +57,7 @@ export const Login = () => {
                     type='text'
                     placeholder='Email'
                     {...register("email")}/>
-                    {errors.email && <p style={{color:"red"}}>{errors.email.messsage}</p>}
+                    {errors.email && <p style={{color:"red"}}>{errors.email.message}</p>}
 
                     <input className='pass'
                         type={showPassword ? "text" : "password"}
