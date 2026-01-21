@@ -5,6 +5,7 @@ import { Home } from './Pages/Home';
 import { AuthContext } from './Pages/authContext';
 import { CartProvider } from './Pages/cartContext';
 import { SearchProvider } from './Pages/searchContext';
+import { Login } from './Pages/Login'
 import SingleProduct from './Pages/SingleProduct';
 
 const App = () => {
@@ -13,10 +14,13 @@ const App = () => {
     <AuthContext>
       <CartProvider>
         <SearchProvider>
-        <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<>
+          <Header />
+          <Home />
+          </>} />
           <Route path="/:id" element={<SingleProduct/>}/>
+          <Route path="/login" element={<Login/>}/>
         </Routes>
         </SearchProvider>
       </CartProvider>

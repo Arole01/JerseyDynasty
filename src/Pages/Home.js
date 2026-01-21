@@ -3,7 +3,6 @@ import "./Home.css"
 import { CartContext } from './cartContext'
 import { SampleProducts } from '../Components/SampleProducts'
 import Slider from "react-slick";
-import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { SearchContext } from './searchContext';
 
@@ -43,8 +42,6 @@ export const Home = () => {
         centerMode: false,
   adaptiveHeight: false,
   variableWidth: false
-
-        // arrows: true,
     }
 
     useEffect(() => {
