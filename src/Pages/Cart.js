@@ -58,9 +58,9 @@ export const Cart = () => {
         <div className="cart-container">
             <div className="cart-header">
         <Link to="/" className="home-btn">    
-    <FontAwesomeIcon icon={faHome} />
-</Link>
-</div>
+            <FontAwesomeIcon icon={faHome} />
+        </Link>
+            </div>
 
             <h2>Your cart</h2> 
             <div className="cart-items"> 

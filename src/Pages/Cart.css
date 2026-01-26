@@ -1,4 +1,4 @@
-/* Full page wrapper */
+
 .cart-page {
   min-height: 100vh;
   width: 100vw;
@@ -10,7 +10,6 @@
   box-sizing: border-box;
 }
 
-/* Cart container */
 .cart-container {
   background: #fff;
   border-radius: 16px;
@@ -23,7 +22,7 @@
   gap: 1.5rem;
 }
 
-/* Heading */
+
 .cart-container h2 {
   font-size: 1.8rem;
   color: #333;
@@ -31,14 +30,14 @@
   text-align: center;
 }
 
-/* Cart items list */
+
 .cart-items {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-/* Individual item card */
+
 .cart-item {
   background: #fafafa;
   border: 1px solid #eee;
@@ -60,7 +59,7 @@
   color: #555;
 }
 
-/* Quantity controls */
+
 .cart-item .quantity-controls {
   display: flex;
   align-items: center;
@@ -82,7 +81,7 @@
   background: #e67e00;
 }
 
-/* Delete button */
+
 .cart-item .delete-btn {
   background: transparent;
   border: 1px solid #FF8C00;
@@ -99,7 +98,7 @@
   color: #fff;
 }
 
-/* Total price */
+
 .cart-total {
   font-size: 1.4rem;
   font-weight: bold;
@@ -107,7 +106,7 @@
   text-align: right;
 }
 
-/* Checkout button */
+
 .checkout-btn {
   padding: 1rem;
   background: #FF8C00;
@@ -132,17 +131,17 @@
 
 .cart-header {
   display: flex;
-  justify-content: flex-end; /* pushes icon to the right */
+  justify-content: flex-end; 
 }
 
 .home-btn {
-  color: #FF8C00;       /* orange theme */
-  font-size: 1.8rem;    /* bigger icon */
+  color: #FF8C00;       
+  font-size: 1.8rem;    
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .home-btn:hover {
-  color: #e67e00;       /* darker orange on hover */
+  color: #e67e00;      
 }
 

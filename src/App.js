@@ -1,5 +1,6 @@
 import React from 'react';
 import { Header } from './Components/Header';
+import { Footer } from './Components/Footer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home } from './Pages/Home';
 import { AuthContext } from './Pages/authContext';
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/" element={<>
           <Header />
           <Home />
+          <Footer />
           </>} />
           <Route path="/:id" element={<SingleProduct/>}/>
           <Route path="/signup" element={<Signup/>}/>
