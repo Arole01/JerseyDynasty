@@ -1,98 +1,98 @@
 .footer-container {
-  background: #222;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 2rem;
-  flex-wrap: wrap;
-  border-top: 1px solid #444;
+    background: #222;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    flex-wrap: wrap;
+    border-top: 1px solid #444;
 }
 
 
 .footer-left ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 .footer-left ul li {
-  margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .footer-left ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .footer-left ul li a:hover {
-  color: #FF8C00;
+    color: #FF8C00;
 }
 
 
 .footer-middle {
-  text-align: center;
-  flex: 1;
+    text-align: center;
+    flex: 1;
 }
 
 .footer-middle p {
-  margin-bottom: 0.5rem;
-  font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
 }
 
 .footer-middle form {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 .footer-middle input {
-  padding: 0.6rem;
-  border-radius: 6px;
-  border: none;
-  outline: none;
-  width: 220px;
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    width: 220px;
 }
 
 .footer-middle button {
-  padding: 0.6rem 1rem;
-  background: #FF8C00;
-  border: none;
-  border-radius: 6px;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
+    padding: 0.6rem 1rem;
+    background: #FF8C00;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .footer-middle button:hover {
-  background: #e67e00;
+    background: #e67e00;
 }
 
 
 .footer-right {
-  text-align: right;
+    text-align: right;
 }
 
 .footer-right p {
-  margin-bottom: 0.5rem;
-  font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
 }
 
 .social-icons {
-  display: flex;
-  gap: 1rem;
-  justify-content: flex-end;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
 }
 
 .social-icons a {
-  color: #fff;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #FF8C00;
+    color: #FF8C00;
 }
 
 

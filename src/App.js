@@ -3,6 +3,7 @@ import { Header } from './Components/Header';
 import { Footer } from './Components/Footer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home } from './Pages/Home';
+import { Faqs } from './Pages/Faqs'
 import { AuthContext } from './Pages/authContext';
 import { CartProvider } from './Pages/cartContext';
 import { Cart } from './Pages/Cart'
@@ -24,6 +25,7 @@ const App = () => {
           <Home />
           <Footer />
           </>} />
+          <Route path="/faqs" element={<Faqs />} />
           <Route path="/:id" element={<SingleProduct/>}/>
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/login" element={<Login/>}/>
