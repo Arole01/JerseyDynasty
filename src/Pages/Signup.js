@@ -91,7 +91,7 @@ const Signup = () => {
 
     return (
         <div className="signup-grid">
-            <h1>Welcome, kindly provide your informations here</h1>
+            <h1>Welcome, kindly provide your information here</h1>
             <form className="form-container" onSubmit={handleSubmit(submit)}>
                 <label>First Name</label>
                 <input type="text" placeholder="First name" {...register("firstname")}/>
@@ -117,7 +117,7 @@ const Signup = () => {
                 <input type={showPassword ? "text" : "password"} placeholder="Confirm your password" {...register("confirmPassword")}/>
                 {errors.confirmPassword && (<p style={{ color: "red"}}>{errors.confirmPassword.message}</p>)}
 
-                <div className="checkbox-container">
+                <div className="checkbox-contain">
                     <input type="checkbox" id="showPassword" checked={showPassword}
                     onChange={(e) => setShowPassword(e.target.checked)}/>
                     <label htmlFor="showPassword">Show Password</label>

@@ -51,7 +51,7 @@ export const Login = () => {
 
     return (
         <div className='login-page'>
-            <form className="form-container" onSubmit={handleSubmit(Submit)}>
+            <form className="login-form" onSubmit={handleSubmit(Submit)}>
                 <h2>Login</h2>
                 <input className='user'
                     type='text'
@@ -65,7 +65,7 @@ export const Login = () => {
                         {...register("password")}/>
                         {errors.password && <p style={{color: "red"}}>{errors.password.message}</p>}
                         
-                        <div className='checkbox-contaner'>
+                        <div className='checkbox-container1'>
                             <input
                                 type='checkbox'
                                 id='showPassword'

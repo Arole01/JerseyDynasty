@@ -10,7 +10,7 @@
 }
 
 
-.form-container {
+.login-form {
     background: #fff;
     padding: 2.5rem;
     border-radius: 16px;
@@ -22,12 +22,11 @@
 }
 
 
-.form-container h2 {
+.login-form h2 {
     text-align: center;
     margin-bottom: 1rem;
     color: #333;
 }
-
 
 .user, .pass {
     width: 100%;
@@ -37,13 +36,29 @@
     font-size: 0.95rem;
 }
 
-
-.checkbox-contaner {
+.checkbox-container {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 0.85rem;
-    color: #555;
+    gap: 5px;
+    margin: 10px 0;
+}
+.checkbox-container input[type="checkbox"] {
+    margin: 0; 
+    width: auto;
+    height: auto; 
+    cursor: pointer; 
+}
+.checkbox-container label {
+    margin: 0; 
+    padding: 0; 
+    font-size: 14px;
+    color: #333; 
+    cursor: pointer; 
+    user-select: none;
+}
+
+.checkbox-container:hover {
+    opacity: 0.8; 
 }
 
 
