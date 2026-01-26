@@ -9,10 +9,25 @@
     border-top: 1px solid #444;
 }
 
+/* Quick Links heading */
+.footer-container h1 {
+  width: 100%;              /* make heading span full width */
+  margin-bottom: 1rem;      /* space below heading */
+  font-size: 1.6rem;
+  color: #FF8C00;
+  text-align: left;
+}
+
+/* Ensure links sit directly under Quick Links */
+.footer-left {
+  margin-top: 0;            /* remove extra spacing */
+}
+
 
 .footer-left ul {
     list-style: none;
     padding: 0;
+    margin-top: 0;
 }
 
 .footer-left ul li {

@@ -7,6 +7,7 @@ import "./Footer.css"
 export const Footer = () => {
     return (
         <footer className="footer-container">
+            <h1>Quick Links</h1>
             <div className="footer-left">
                 <ul>
                     <li><Link to="/faqs">FAQs</Link></li>
