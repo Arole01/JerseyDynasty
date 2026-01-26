@@ -5,6 +5,7 @@ import axios from "axios"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { toast } from "react-toastify"
 import { Link } from "react-router-dom"
+import "./Signup.css"
 
 
 const schema = Yup.object({
@@ -29,7 +30,7 @@ const Signup = () => {
 
 
     const {
-        handlesubmit,
+        handleSubmit,
         register,
         formState: {errors},
         setValue,
@@ -91,7 +92,7 @@ const Signup = () => {
     return (
         <div className="signup-grid">
             <h1>Welcome, kindly provide your informations here</h1>
-            <form className="form-container" onSubmit={handlesubmit(submit)}>
+            <form className="form-container" onSubmit={handleSubmit(submit)}>
                 <label>First Name</label>
                 <input type="text" placeholder="First name" {...register("firstname")}/>
                 {errors.firstname && <p style={{ color: "red"}}>{errors.firstname.message}</p>}
@@ -138,7 +139,53 @@ const Signup = () => {
         <label>Address</label>
         <input type="text" {...register("address")} placeholder="Enter your address" />
         {errors.address && <p style={{ color: "red" }}>{errors.address.message}</p>}
+
+        <label>Country</label>
+            <select
+            {...register("country")}
+            onChange={(e) => {
+                setselectedCountry(e.target.value)
+                setValue("country", e.target.value)
+                setValue("city", "")
+            }}>
+                <option value="">Select Country</option>
+                {countries.map((country, index) => (
+                    <option key={index} value={country}>
+                        {country}
+                    </option>
+                ))}
+            </select>
+            {errors.country && <p style={{ color:"red"}}>{errors.country.message}</p>}
+
+
+            <label>City</label>
+            <select {...register("city")} disabled={!selectedCountry || loadingCities}>
+                <option value="">
+                    {loadingCities ? "Loading cities..." : "Select City"}
+                </option>
+                {cities.map((city, index) => (
+                    <option key={index} value={city}>
+                        {city}
+                    </option>
+                ))}
+            </select>
+            {errors.city && <p style={{ color: "red"}}>
+                {errors.city.message}
+                </p>}
+
+            <button className="bttn" disabled={loading}>
+                {loading ? "Signing up..." : "Sign up"}
+            </button>
             </form>
+
+            <p>
+        Already have an account?
+        <Link to="/login">
+            <button className="btnnn">Login</button>
+        </Link>
+        </p>
         </div>
     )
 }
+
+export default Signup
