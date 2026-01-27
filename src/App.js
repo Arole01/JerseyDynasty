@@ -4,6 +4,7 @@ import { Footer } from './Components/Footer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home } from './Pages/Home';
 import { Faqs } from './Pages/Faqs'
+import { SizeGuide } from './Pages/SizeGuide';
 import { AuthContext } from './Pages/authContext';
 import { CartProvider } from './Pages/cartContext';
 import { Cart } from './Pages/Cart'
@@ -12,6 +13,8 @@ import { Login } from './Pages/Login'
 import SingleProduct from './Pages/SingleProduct';
 import Signup from './Pages/Signup';
 import { Payment } from './Pages/Payment'
+import { RefundPolicy } from './Pages/RefundPolicy';
+import { PrivacyPolicy } from './Pages/PrivacyPolicy';
 
 const App = () => {
   return (
@@ -26,6 +29,9 @@ const App = () => {
           <Footer />
           </>} />
           <Route path="/faqs" element={<Faqs />} />
+          <Route path="/size-guide" element={<SizeGuide />} />
+          <Route path="/refund-policy" element={<RefundPolicy />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/:id" element={<SingleProduct/>}/>
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/login" element={<Login/>}/>

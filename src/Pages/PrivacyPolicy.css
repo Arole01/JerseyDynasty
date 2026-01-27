@@ -1,0 +1,82 @@
+/* Main container */
+.privacy-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* Page title */
+.privacy-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #FF8C00;
+  font-weight: bold;
+}
+
+/* Section headings */
+.privacy-container h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #333;
+  font-weight: 600;
+  border-left: 4px solid #FF8C00;
+  padding-left: 0.5rem;
+}
+
+/* Sub-heading (Contact Us section) */
+.privacy-container h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #444;
+  font-weight: 600;
+}
+
+/* Paragraphs */
+.privacy-container p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* Lists */
+.privacy-container ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  list-style-type: disc;
+}
+
+.privacy-container li {
+  margin-bottom: 0.5rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ✅ Extra spacing when multiple <p> follow the same heading */
+.privacy-container h2 + p + p {
+  margin-top: 0.8rem;
+}
+
+.privacy-container h1 + p + p {
+  margin-top: 0.8rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .privacy-container {
+    padding: 1rem;
+  }
+
+  .privacy-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .privacy-container h2 {
+    font-size: 1.2rem;
+  }
+}

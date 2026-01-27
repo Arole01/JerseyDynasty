@@ -95,10 +95,12 @@ export const Cart = () => {
                         </div> 
 
                         <h2 className="cart-total">Total Price: {Math.round(getTotal())}</h2> 
-
+                        
                         <button className="checkout-btn" onClick={handleCheckout} disabled={loading}> {loading ? "Proceeding..." : "Proceed to checkout"} 
                             </button> 
                             </div> 
                             </div>
                             ); 
                         };
+
+                        
