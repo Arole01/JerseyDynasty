@@ -15,6 +15,7 @@ import Signup from './Pages/Signup';
 import { Payment } from './Pages/Payment'
 import { RefundPolicy } from './Pages/RefundPolicy';
 import { PrivacyPolicy } from './Pages/PrivacyPolicy';
+import { Contact } from './Pages/Contact';
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="/size-guide" element={<SizeGuide />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/contact" element={<Contact/>}/>
           <Route path="/:id" element={<SingleProduct/>}/>
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/login" element={<Login/>}/>
