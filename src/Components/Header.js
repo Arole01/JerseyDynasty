@@ -39,11 +39,6 @@ export const Header = () => {
                     <span className='cart-count'>{cart.items.length}</span>
                 </Link>
         </div>
-        <div className="search-bar"> <input type="text" placeholder="Search for jerseys" 
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}/> 
-        <button type="submit">Search</button> 
-        </div>
         
         </header>
     )

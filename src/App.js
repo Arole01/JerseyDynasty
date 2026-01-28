@@ -16,6 +16,8 @@ import { Payment } from './Pages/Payment'
 import { RefundPolicy } from './Pages/RefundPolicy';
 import { PrivacyPolicy } from './Pages/PrivacyPolicy';
 import { Contact } from './Pages/Contact';
+import { Layout } from './Components/Layout';
+
 
 const App = () => {
   return (
@@ -24,16 +26,12 @@ const App = () => {
       <CartProvider>
         <SearchProvider>
         <Routes>
-          <Route path="/" element={<>
-          <Header />
-          <Home />
-          <Footer />
-          </>} />
-          <Route path="/faqs" element={<Faqs />} />
-          <Route path="/size-guide" element={<SizeGuide />} />
-          <Route path="/refund-policy" element={<RefundPolicy />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/contact" element={<Contact/>}/>
+          <Route path="/" element={<Layout><Home /></Layout>} />
+          <Route path="/faqs" element={<Layout><Faqs /></Layout>} />
+          <Route path="/size-guide" element={<Layout><SizeGuide /></Layout>} />
+          <Route path="/refund-policy" element={<Layout><RefundPolicy /></Layout>} />
+          <Route path="/privacy-policy" element={<Layout><PrivacyPolicy /></Layout>} />
+          <Route path="/contact" element={<Layout><Contact/></Layout>}/>
           <Route path="/:id" element={<SingleProduct/>}/>
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/login" element={<Login/>}/>

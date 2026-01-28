@@ -7,13 +7,13 @@ import { Link } from 'react-router-dom';
 import { SearchContext } from './searchContext';
 
 export const Home = () => {
-    const { searchTerm } = useContext(SearchContext)
+    const { searchTerm, setSearchTerm } = useContext(SearchContext)
     const [products, setProducts] = useState([]);
     const [category, setCategory] = useState("")
     const [err, setErr] = useState("");
     const {addToCart} = useContext(CartContext)
     const [loading, setLoading] = useState(true)
-
+        
 
     const carouselImages = [
         {id: "img1", src:"https://res.cloudinary.com/de91sxsp3/image/upload/v1768308954/WhatsApp_Image_2026-01-12_at_22.13.39_ljacx6.jpg"},
@@ -70,6 +70,16 @@ export const Home = () => {
 
     return (
         <>
+
+        <section className="search-section">
+        <div className="search-bar">
+          <input type="text" placeholder="Search for jerseys..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <button type="submit">Search</button>
+        </div>
+      </section>
+
+
         <div className='carousel'>
             <section className="carousel-container">
                 <Slider {...sliderSettings}>
@@ -124,6 +134,7 @@ export const Home = () => {
 
         
     )
+    
     }
 
     export default Home
