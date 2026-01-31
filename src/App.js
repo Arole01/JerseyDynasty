@@ -17,13 +17,14 @@ import { RefundPolicy } from './Pages/RefundPolicy';
 import { PrivacyPolicy } from './Pages/PrivacyPolicy';
 import { Contact } from './Pages/Contact';
 import { Layout } from './Components/Layout';
-
+import { ToastContainer } from 'react-toastify';
 
 const App = () => {
   return (
     <BrowserRouter>
     <AuthContext>
       <CartProvider>
+        <ToastContainer position='top-right' autoClose={1000}></ToastContainer>
         <SearchProvider>
         <Routes>
           <Route path="/" element={<Layout><Home /></Layout>} />

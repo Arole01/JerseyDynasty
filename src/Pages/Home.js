@@ -40,8 +40,8 @@ export const Home = () => {
         autoplay: true,
         autoplaySpeed: 3000,
         centerMode: false,
-  adaptiveHeight: false,
-  variableWidth: false
+        daptiveHeight: false,
+        variableWidth: false
     }
 
     useEffect(() => {
@@ -73,11 +73,11 @@ export const Home = () => {
 
         <section className="search-section">
         <div className="search-bar">
-          <input type="text" placeholder="Search for jerseys..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <button type="submit">Search</button>
+            <input type="text" placeholder="Search for jerseys..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <button type="submit">Search</button>
         </div>
-      </section>
+        </section>
 
 
         <div className='carousel'>
