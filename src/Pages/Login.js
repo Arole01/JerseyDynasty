@@ -3,6 +3,7 @@ import { AppContext } from './authContext'
 import { useNavigate, Link, data } from 'react-router-dom'
 import * as Yup from "yup"
 import { useForm } from 'react-hook-form'
+import axios from 'axios'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { toast } from 'react-toastify'
 import "./Login.css"
@@ -33,16 +34,16 @@ export const Login = () => {
         try {
             setLoading(true)
 
-            if (data.email === "ajosedavidayobami@gmail.com" && data.password === "Password1!") {
-                loginAuth({ user : { email: data.email }})
+            const response = await axios.post("https://jerseydynasty.onrender.com/login", data)
+            // if (data.email === "ajosedavidayobami@gmail.com" && data.password === "Password1!") {
+                loginAuth(response.data)
                 toast.success("Login successful")
                 navigate("/")
-            } else {
-                toast.error("Invalid credentials")
-            }
+            // } else {
+            //     toast.error("Invalid credentials")
+            // }
         } catch (error) {
-            console.log(error)
-            toast.error("Something went wrong")
+            toast.error(error.response?.data?.message)
         } finally {
             setLoading(false)
         }
