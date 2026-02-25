@@ -79,7 +79,7 @@ const Signup = () => {
             const { confirmPassword, ...userData } = data;
             setLoading(true)
 
-            const response = await axios.post( "https://your-backend-api.com/api/auth/register", userData );
+            const response = await axios.post( "https://jerseydynasty.onrender.com/newuser", userData );
 
             toast.success(response?.data?.message || "Signup successful")
         } catch (error) {

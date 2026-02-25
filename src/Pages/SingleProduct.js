@@ -1,19 +1,53 @@
 import React from "react";
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 import { useParams, Link } from "react-router-dom";
 import { SampleProducts } from "../Components/SampleProducts"
 import "./SingleProduct.css"
 
-const SingleProduct = () => {
-    const { id } = useParams()
-    const product = SampleProducts.find((item) => item._id === id)
+export const SingleProduct = () => {
+    const [product,setProduct] = useState({})
+    const [related,setRelated] = useState([])
+    const [getCategory, setGetCategory] = useState(true)
+    const [loading, setLoading] = useState(true)
+    const id = useParams()
 
-    if(!product) {
-        return <h2>Product not found</h2>
-    }
+useEffect(()=>{
+        const fetchProduct = async()=>{
+            try {
+                setLoading(true)
+                const response= await axios.get(`https://jerseydynasty.onrender.com/api/product/${id.id}`)
 
-    const related = SampleProducts.filter(
-        (item) => item.category === product.category && item._id !== product._id
-    )
+                setProduct(response.data)
+
+                if (!response.data.category || !response.data.category.name){
+                    setGetCategory(false)
+                    setRelated([])
+                    setLoading(false)
+                    return
+                }
+
+                setGetCategory(true)
+
+        const categoryResponse = await axios.get(
+            `https://davidbackend-ts7d.onrender.com/api/product?category=${response.data.category.name}`
+        )
+
+        const filter = categoryResponse.data.filter((allItems)=>allItems._id != response.data._id)
+        console.log(categoryResponse)
+        
+        setRelated(filter);
+        
+            } catch (error) {
+                console.log("errorsssssss",error)
+                setGetCategory(false)
+                setRelated([])
+            } finally {
+                setLoading(false)
+            }
+        }
+        fetchProduct()
+    },[id])
 
     return (
         <div className="jersey-detail">

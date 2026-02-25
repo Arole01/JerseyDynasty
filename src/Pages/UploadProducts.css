@@ -1,0 +1,27 @@
+body {
+    margin-bottom: 30px;
+    background: white;
+}
+
+input {
+    display: block;
+    width: 20%; 
+    padding: 8px; 
+    margin-bottom: 10px; 
+    margin-top: 20px;
+    border-radius: 5px; 
+    border: 1px solid #ccc;
+}
+
+.click{
+    display: block;
+    margin: 10px 0 5px;
+    cursor: pointer;
+}
+
+.click:hover{
+    background: #FFE797;
+}
+
+
+
