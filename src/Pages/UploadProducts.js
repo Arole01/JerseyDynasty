@@ -35,7 +35,7 @@ export const UploadProducts = () =>{
 
     const fetchCategory = async()=> {
         try {
-            const {data} = await axios.get("https://davidbackend-ts7d.onrender.com/api/categories")
+            const {data} = await axios.get("https://jerseydynasty.onrender.com/api/product/categories")
             setCategory(data)
 
         } catch (error) {
@@ -71,12 +71,12 @@ export const UploadProducts = () =>{
         info.append("name",data.name)
         info.append("description",data.description)
         info.append("price",data.price)
-        info.append("stock",data.stock)
+        info.append("quantity",data.quantity)
         info.append("category",data.category)
         info.append("image",data.image[0])
     try {
         setLoading(true)
-        const response = await axios.post("`https://jerseydynasty.onrender.com/api/product",info,authToken())
+        const response = await axios.post("https://jerseydynasty.onrender.com/api/product",info,authToken())
         toast.success("product successfully Uploaded")
         reset()
     } catch (error) {
